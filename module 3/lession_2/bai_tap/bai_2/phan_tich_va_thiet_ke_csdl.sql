@@ -58,16 +58,16 @@ foreign key(customer_number) references customers(customer_number)
 
 
 create table payments(
-payment_code int(255) primary key,
+payment_code int primary key,
 date_of_payment date,
-total_money int(255),
+total_money int,
 customer_number int,
-foreign key(customer_number) references customers(cutomer_number)
+foreign key(customer_number) references customers(customer_number)
 );
 
 create table order_details (
     order_number int,
-    product_code varchar(15),
+    product_code int,
     primary key (order_number , product_code),
     foreign key (order_number) references orders (order_number),
     foreign key (product_code) references products (product_code)
