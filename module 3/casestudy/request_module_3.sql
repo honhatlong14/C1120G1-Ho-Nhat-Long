@@ -2,9 +2,9 @@ use furama_resort;
 -- ---- task 2-- ----
 -- --2.	Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 ký tự.-- --
 select * from employees where (
-employee_name like '%%L %' 
-or employee_name like '%%t %' 
-or employee_name like '%%k %')
+employee_name like 'H%' 
+or employee_name like 'T%' 
+or employee_name like 'K%')
 and char_length(employee_name) <=15;
 
 -- ---- task 3	Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.-- ------
@@ -50,7 +50,12 @@ Dịch vụ chưa từng được Khách hàng thực hiện đặt từ quý 1 
 -- -- task7 -- ---
 /*7.	Hiển thị thông tin IDDichVu, TenDichVu, DienTich, SoNguoiToiDa, ChiPhiThue, TenLoaiDichVu của tất cả các loại 
 dịch vụ đã từng được Khách hàng đặt phòng trong năm 2018 nhưng chưa từng được Khách hàng đặt phòng  trong năm 2019.*/
+-- select service_id,service_name,service_are,max_number_of_people,rental_costs,type_service.type_service_name
+-- from services
+-- join type_service on services.type_of_service_id = type_service.type_service_id
+-- where not exists(
 
+-- );
 -- task8
 /*8.	Hiển thị thông tin HoTenKhachHang có trong hệ thống, với yêu cầu HoThenKhachHang không trùng nhau.
 Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên*/
