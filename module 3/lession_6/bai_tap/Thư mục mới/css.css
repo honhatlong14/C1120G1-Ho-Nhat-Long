@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    color: red;
+
+}
+
+
+span{
+color: blue;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.vn{
+    font-weight: bold;
+    color: black;
+}
+
+/*Sắp xếp nội dung cho các dòng có chiều rộng bằng nhau*/
+p {
+    text-align: justify;
+    font-size: 20px;
+}

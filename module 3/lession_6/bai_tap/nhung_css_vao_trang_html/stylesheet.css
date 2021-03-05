@@ -1,0 +1,11 @@
+body{
+    background-color: white;
+}
+h1{
+    color: pink;
+    text-align: center;
+}
+pre{
+    color: blue;
+    text-align: center;
+}
