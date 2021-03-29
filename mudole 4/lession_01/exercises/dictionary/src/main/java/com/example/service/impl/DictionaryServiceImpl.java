@@ -20,6 +20,11 @@ public class DictionaryServiceImpl implements DictionaryService {
 
         String result = dic.get(word);
 
-        return (result == null) ? "Khong Tim Thay" : result;
+        if (result == null){
+            return "khong tim thay";
+        }else {
+            return result;
+        }
+//        return (result == null) ? "Khong Tim Thay" : result;
     }
 }
