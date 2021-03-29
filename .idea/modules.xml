@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/C1120G1-Ho-Nhat-Long.iml" filepath="$PROJECT_DIR$/.idea/C1120G1-Ho-Nhat-Long.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module 2/module 2.iml" filepath="$PROJECT_DIR$/module 2/module 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module 3/lession_9/practice/tao_trang_web_login_va_hien_thi_loi_chao/tao_trang_web_login_va_hien_thi_loi_chao.iml" filepath="$PROJECT_DIR$/module 3/lession_9/practice/tao_trang_web_login_va_hien_thi_loi_chao/tao_trang_web_login_va_hien_thi_loi_chao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module 3/lession_9/practice/thuc_hanh_tao_trang_web_he_thong/thuc_hanh_tao_trang_web_he_thong.iml" filepath="$PROJECT_DIR$/module 3/lession_9/practice/thuc_hanh_tao_trang_web_he_thong/thuc_hanh_tao_trang_web_he_thong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module 3/lession_9/practice/ung_dung_chuyen_doi_tien_te/ung_dung_chuyen_doi_tien_te.iml" filepath="$PROJECT_DIR$/module 3/lession_9/practice/ung_dung_chuyen_doi_tien_te/ung_dung_chuyen_doi_tien_te.iml" />
+    </modules>
+  </component>
+</project>
