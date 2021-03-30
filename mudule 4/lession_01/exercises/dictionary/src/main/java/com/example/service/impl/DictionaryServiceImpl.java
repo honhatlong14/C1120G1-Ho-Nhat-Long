@@ -10,15 +10,16 @@ import java.util.Map;
 public class DictionaryServiceImpl implements DictionaryService {
     @Override
     public String searchDictionary(String word) {
-        Map<String,String> dic = new HashMap<>();
-        dic.put("hello","xin chào");
-        dic.put("student","student");
-        dic.put("fan","cái quạt");
-        dic.put("air conditioning","điều hòa");
-        dic.put("fridge","tủ lạnh");
-        dic.put("chair","cái ghế");
 
-        String result = dic.get(word);
+        Map<String,String> mapDictionary = new HashMap<>();
+        mapDictionary.put("hello","xin chào");
+        mapDictionary.put("student","student");
+        mapDictionary.put("fan","cái quạt");
+        mapDictionary.put("air conditioning","điều hòa");
+        mapDictionary.put("fridge","tủ lạnh");
+        mapDictionary.put("chair","cái ghế");
+
+        String result = mapDictionary.get(word);
 
         if (result == null){
             return "khong tim thay";
