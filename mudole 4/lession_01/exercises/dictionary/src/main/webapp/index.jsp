@@ -15,7 +15,7 @@
   <form action="/dictionary">
     <p>Enter your word:</p>
     <input type="text" name="word">
-    <input type="submit" value="dictionary">
+    <input type="submit" value="search">
   </form>
   </body>
 </html>
