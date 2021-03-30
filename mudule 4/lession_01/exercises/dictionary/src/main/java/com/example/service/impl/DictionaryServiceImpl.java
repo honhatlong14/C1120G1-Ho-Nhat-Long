@@ -9,7 +9,7 @@ import java.util.Map;
 @Service
 public class DictionaryServiceImpl implements DictionaryService {
     @Override
-    public String dictionary(String word) {
+    public String searchDictionary(String word) {
         Map<String,String> dic = new HashMap<>();
         dic.put("hello","xin chào");
         dic.put("student","student");

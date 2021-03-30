@@ -14,7 +14,7 @@ public class DictionaryController {
 
     @GetMapping({"","/dictionary"})
     public String SearchDictionary(@RequestParam String word, Model model){
-        String result = dictionaryService.dictionary(word);
+        String result = dictionaryService.searchDictionary(word);
         model.addAttribute("result", result);
         model.addAttribute("word",word);
 

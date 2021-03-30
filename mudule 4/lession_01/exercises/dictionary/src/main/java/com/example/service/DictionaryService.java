@@ -1,5 +1,5 @@
 package com.example.service;
 
 public interface DictionaryService {
-    String dictionary(String word);
+    String searchDictionary(String word);
 }
