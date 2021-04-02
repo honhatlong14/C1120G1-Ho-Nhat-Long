@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/layout :: head">
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
+<head th:replace="/layout :: head"></head>
 <body>
 <h3>Products</h3>
 <p>
@@ -28,7 +25,12 @@
         <td th:text="${row.getNameProduct()}"></td>
         <td th:text="${row.getPriceProduct()}"></td>
         <td><a th:href="@{/product/{id}/edit(id=${row.getId()})}">edit</a></td>
-        <td><a th:href="@{/product/{id}/delete(id=${row.getId()})}">delete</a></td>
+        <td><a th:href="@{/product/{id}/delete(id=${row.getId()})}">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                delete
+            </button>
+        </a>
+        </td>
         <td><a th:href="@{/product/{id}/view(id=${row.getId()})}">view</a></td>
     </tr>
     </tbody>
