@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/layout :: head"></head>
+<head th:replace="/layout :: head">
+
+</head>
 <body>
 <h3>Products</h3>
 <p>
@@ -20,18 +22,17 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="row,rowStat : ${products}">
+    <tr th:each="product,rowStat : ${products}">
         <td th:text="${rowStat.count}">Id</td>
-        <td th:text="${row.getNameProduct()}"></td>
-        <td th:text="${row.getPriceProduct()}"></td>
-        <td><a th:href="@{/product/{id}/edit(id=${row.getId()})}">edit</a></td>
-        <td><a th:href="@{/product/{id}/delete(id=${row.getId()})}">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                delete
-            </button>
-        </a>
+        <td th:text="${product.nameProduct}"></td>
+        <td th:text="${product.priceProduct}"></td>
+        <td><a th:href="@{/product/{id}/edit(id=${product.getId()})}">edit</a></td>
+        <td> <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                     th:onclick="'productSetId(\''+ ${product.id} +'\')'">Delete
+            <i class="fas fa-ban"></i>
+        </button>
         </td>
-        <td><a th:href="@{/product/{id}/view(id=${row.getId()})}">view</a></td>
+        <td><a th:href="@{/product/{id}/view(id=${product.getId()})}">view</a></td>
     </tr>
     </tbody>
 </table>
@@ -39,6 +40,8 @@
     <div th:if="${success}"></div>
     <span th:text="${success}"></span>
 </div>
+<div th:replace="/layout :: deleteModal"></div>
+<div th:replace="/layout :: script"></div>
 <footer th:replace="/layout :: footer"></footer>
 </body>
 </html>
