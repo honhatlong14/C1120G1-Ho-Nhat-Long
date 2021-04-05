@@ -52,7 +52,7 @@ public class BlogController {
     }
 
     @GetMapping("/view/{id}")
-    public String delete(@PathVariable("id") int id, Model model){
+    public String view(@PathVariable("id") int id, Model model){
         model.addAttribute("blog", blogService.findById(id));
         return "view";
     }
