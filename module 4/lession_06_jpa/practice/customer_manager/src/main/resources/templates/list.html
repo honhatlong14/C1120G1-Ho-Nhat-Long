@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Manager Customer</title>
+</head>
+<body>
+<h3>Manager Customer</h3>
+<h4>
+    <a href="customer/create">Add New Customer</a>
+</h4>
+<table class="table table-striped">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Address</td>
+        <td>Edit Product</td>
+        <td>View Product</td>
+        <td>Delete Product</td>
+    </tr>
+    <tbody>
+    <tr th:each="customer,customers: ${customers}">
+        <td th:text="${customers.count}"></td>
+        <td th:text="${customer.name}"></td>
+        <td th:text="${customer.age}"></td>
+        <td th:text="${customer.address}"></td>
+        <td><a th:href="@{/customer/{id}/edit(id=${customer.getId()})}">edit</a></td>
+        <td><a th:href="@{/customer/{id}/view(id=${customer.getId()})}">view</a></td>
+        <td><a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop"
+                    th:onclick="'customerSetId(\''+ ${customer.id} +'\')'" >
+                delete
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure about that?
+                        </div>
+                        <form method="get" action="/customer/delete">
+                        <div class="modal-footer">
+                            <input type="hidden" id="id" name="id">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" >delete
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </a>
+        </td>
+    </tr>
+    <script>
+        function customerSetId(id) {
+            document.getElementById("id").value = id;
+        }
+    </script>
+    </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</body>
+</html>
