@@ -1,4 +1,4 @@
-package com.example.blog.bean.model;
+package com.example.blog.model;
 
 import javax.persistence.*;
 import java.util.Date;

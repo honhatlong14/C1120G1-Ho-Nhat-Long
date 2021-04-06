@@ -1,6 +1,6 @@
-package com.example.blog.bean.service;
+package com.example.blog.service;
 
-import com.example.blog.bean.model.Blog;
+import com.example.blog.model.Blog;
 
 
 public interface BlogService {
