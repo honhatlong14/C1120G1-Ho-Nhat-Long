@@ -1,4 +1,6 @@
 package com.example.restful.repository;
 
-public interface CustomerRepository {
+import com.example.restful.entity.Customer;
+
+public interface CustomerRepository extends Repository<Customer> {
 }
