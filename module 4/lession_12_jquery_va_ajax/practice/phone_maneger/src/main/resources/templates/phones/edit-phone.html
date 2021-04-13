@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Edit Smartphone</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -10,7 +10,7 @@
                 var producer = $('#producer').val();
                 var model = $('#model').val();
                 var price = $('#price').val();
-                var json = {"producer":producer, "model":model, "price":price};
+                var json = {"producer": producer, "model": model, "price": price};
                 $.ajax({
                     url: $("#editSmartphoneForm").attr("action"),
                     data: JSON.stringify(json),
@@ -58,14 +58,14 @@
             </tr>
             <tr>
                 <td>Model:</td>
-                <td><input th:field="*{model}" /></td>
+                <td><input th:field="*{model}"/></td>
             </tr>
             <tr>
                 <td>Price:</td>
                 <td><input th:field="*{price}"/></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Edit" /></td>
+                <td><input type="submit" value="Edit"/></td>
                 <td></td>
             </tr>
             </tbody>
