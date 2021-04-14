@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+<h1 th:text="#{customer}" style="text-align: center"></h1>
+Language: <a href="?lang=en">English</a> | <a href="?lang=vi">Vietnamese</a> | <a href="?lang=ja">Japanese</a> | <a
+        href="?lang=cn">Chinese</a> |<a href="?lang=ko">Korean</a>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th th:text="#{customer.id}"></th>
+        <th th:text="#{customer.firstname}"></th>
+        <th th:text="#{customer.lastname}"></th>
+        <th th:text="#{customer.action}"></th>
+    </tr>
+    </thead>
+</table>
+</body>
+</html>
