@@ -68,5 +68,4 @@ public class SmartPhoneController {
         smartphone.setId(id);
         return smartphoneService.save(smartphone);
     }
-
 }
