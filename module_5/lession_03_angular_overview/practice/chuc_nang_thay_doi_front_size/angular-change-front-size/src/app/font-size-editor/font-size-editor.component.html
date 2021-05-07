@@ -1,0 +1,27 @@
+<h2>Font size editor</h2>
+
+<div>
+  <label>Enter font size (px):</label>
+  <input #element type="range" min="9" max="72" value="18" (change)="changeFrontSizeValue(element.value)">
+</div>
+
+<p class="output" [style.fontSize.px]="frontSize">
+  This is a paragraph. {{frontSize}}
+</p>
+
+
+/*cách 2*/
+
+<h2>Font size editor</h2>
+
+<div>
+  <label>Enter font size (px):</label>
+  <input type="range" min="9" max="72" value="18" [(ngModel)]="fontSize">
+</div>
+
+<p class="output" [style.fontSize.px]="fontSize">
+  This is a paragraph. {{fontSize}}
+</p>
+
+
+
