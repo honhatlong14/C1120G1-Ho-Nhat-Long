@@ -1,0 +1,19 @@
+.sold-out {
+  color: red;
+  font-style: italic;
+}
+
+.few-left {
+  color: royalblue;
+}
+
+.full-stock {
+  color: teal;
+  font-weight: 500;
+}
+.btn {
+  margin-right: 15px;
+}
+.alert {
+  margin-right: 20px;
+}
