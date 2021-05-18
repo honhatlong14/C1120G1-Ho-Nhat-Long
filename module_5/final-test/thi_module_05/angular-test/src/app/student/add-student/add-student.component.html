@@ -1,0 +1,102 @@
+<div id="createForms"
+     style="padding-left: 20px"
+     class="container frame-shadow justify-content-center align-items-center col-6">
+  <h1 style="color: teal" class="text-uppercase">add new student</h1>
+  <form [formGroup]="createForm" (ngSubmit)="submitCreateForm(createForm)">
+    <table class="table table-hover">
+      <tbody>
+      <tr>
+        <th>
+          <label for="id">ID Student: </label>
+        </th>
+        <td>
+          <input type="text" class="form-control" formControlName="id" id="id">
+          <p *ngIf="createForm.controls.name_student.touched" class="msgError">
+            <span *ngIf="createForm.controls.name_student.errors?.required">Name Student is required</span>
+            <span *ngIf="createForm.controls.name_student.errors?.required">Student name does not contain special characters</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="name_student">Name Student: </label>
+        </th>
+        <td>
+          <input type="text" class="form-control" formControlName="name_student" id="name_student">
+          <p *ngIf="createForm.controls.name_student.touched" class="msgError">
+            <span *ngIf="createForm.controls.name_student.errors?.required">Name Student is required</span>
+            <span *ngIf="createForm.controls.name_student.errors?.required">Student name does not contain special characters</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="name_group">Name Group: </label>
+        </th>
+        <td>
+          <input type="text" class="form-control" formControlName="name_group" id="name_group">
+          <p *ngIf="createForm.controls.name_group.touched" class="msgError">
+            <span *ngIf="createForm.controls.name_group.errors?.required">Name Group is required</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="name_topic">Name Topic: </label>
+        </th>
+        <td>
+          <input type="text" class="form-control" formControlName="name_topic" id="name_topic">
+          <p *ngIf="createForm.controls.name_topic.touched" class="msgError">
+            <span *ngIf="createForm.controls.name_topic.errors?.required">Name Topic is required</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="tutor">Tutor: </label>
+        </th>
+        <td>
+          <input type="text" class="form-control" formControlName="tutor" id="tutor">
+          <p *ngIf="createForm.controls.tutor.touched" class="msgError">
+            <span *ngIf="createForm.controls.tutor.errors?.required">Tutor is required</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="email">Email: </label>
+        </th>
+        <td>
+          <input type="text" class="form-control" formControlName="email" id="email">
+          <p *ngIf="createForm.controls.email.touched" class="msgError">
+            <span *ngIf="createForm.controls.email.errors?.required">Email is required</span>
+            <span *ngIf="createForm.controls.email.errors?.required">Email must be in the format abc@gmail.com</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="phone">Phone: </label>
+        </th>
+        <td>
+          <input type="text" class="form-control" formControlName="phone" id="phone">
+          <p *ngIf="createForm.controls.phone.touched" class="msgError">
+            <span *ngIf="createForm.controls.phone.errors?.required">Phone is required</span>
+            <span *ngIf="createForm.controls.phone.errors?.required">Phone number must be in the correct format 10-12 digits</span>
+          </p>
+        </td>
+      </tr>
+      <tr class="text-center">
+        <td>
+          <button class="btn btnBack" (click)="backToList()" type="button">Back</button>
+        </td>
+        <td>
+          <button class="btn btn-warning mb-2" type="submit" [disabled]="createForm.invalid">Create</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+
+

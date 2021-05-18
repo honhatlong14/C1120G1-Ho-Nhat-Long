@@ -1,0 +1,53 @@
+<div class="container justify-content-center align-items-center">
+
+
+  <div class="justify-content-center align-items-center frame-shadow"
+       style="padding-left: 20px"
+       *ngIf="listStudent.length != 0;">
+    <button routerLink="add" class="btn btn-success">Create
+      <i class="far fa-plus-square"></i>
+    </button>
+    <h1 style="color: blue" class="text-uppercase text-center">list student</h1>
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>No</th>
+        <th>ID Student</th>
+        <th>Name Student</th>
+        <th>Name Group</th>
+        <th>Name topic</th>
+        <th>Tutor</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Options</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let student of listStudent, let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{student['id']}}</td>
+        <td>{{student.name_student}}</td>
+        <td>{{student.name_group }}</td>
+        <td>{{student.name_topic }}</td>
+        <td>{{student.tutor}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.phone}}</td>
+        <td>
+          <a [routerLink]="['edit', student['id']]">
+            <button class="btn btn-warning">edit
+              <i class="fas fa-edit text-dark"></i>
+            </button>
+          </a>
+          <a [routerLink]="['delete', student['id']]">
+            <button class="btn btn-danger">delete
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
